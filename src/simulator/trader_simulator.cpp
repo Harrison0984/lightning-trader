@@ -82,7 +82,7 @@ por_t trader_simulator::place_order(offset_type offset, direction_type direction
 				//平昨
 				order_info history_order;
 				history_order.est_id = make_estid();
-				LOG_DEBUG("tick_simulator::place_order history_order %llu \n", order.est_id);
+				LOG_DEBUG("tick_simulator::place_order history_order %llu \n", history_order.est_id);
 				history_order.code = code;
 				history_order.create_time = _current_time;
 				history_order.offset = offset;
@@ -98,7 +98,7 @@ por_t trader_simulator::place_order(offset_type offset, direction_type direction
 				//平昨加平今
 				order_info history_order;
 				history_order.est_id = make_estid();
-				LOG_DEBUG("tick_simulator::place_order history_order %llu \n", order.est_id);
+				LOG_DEBUG("tick_simulator::place_order history_order %llu \n", history_order.est_id);
 				history_order.code = code;
 				history_order.create_time = _current_time;
 				history_order.offset = offset;
@@ -110,7 +110,7 @@ por_t trader_simulator::place_order(offset_type offset, direction_type direction
 
 				order_info today_order;
 				today_order.est_id = make_estid();
-				LOG_DEBUG("tick_simulator::place_order today_order %llu \n", order.est_id);
+				LOG_DEBUG("tick_simulator::place_order today_order %llu \n", today_order.est_id);
 				today_order.code = code;
 				today_order.create_time = _current_time;
 				today_order.offset = offset;
@@ -126,7 +126,7 @@ por_t trader_simulator::place_order(offset_type offset, direction_type direction
 		{
 			order_info today_order;
 			today_order.est_id = make_estid();
-			LOG_DEBUG("tick_simulator::place_order today_order %llu \n", order.est_id);
+			LOG_DEBUG("tick_simulator::place_order today_order %llu \n", today_order.est_id);
 			today_order.code = code;
 			today_order.create_time = _current_time;
 			today_order.offset = offset;
